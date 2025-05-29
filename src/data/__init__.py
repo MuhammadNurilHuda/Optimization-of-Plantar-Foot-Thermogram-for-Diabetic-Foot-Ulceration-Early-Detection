@@ -1,3 +1,5 @@
+# src\data\__init__.py
+
 from .data_loader import organize_images
 from .data_preprocessing import (
     calculate_average, 

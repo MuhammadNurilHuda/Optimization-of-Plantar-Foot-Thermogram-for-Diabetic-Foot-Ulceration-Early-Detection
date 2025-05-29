@@ -11,7 +11,7 @@ logging.config.fileConfig('configs/logging.conf')
 # Dapatkan logger untuk modul ini
 logger = logging.getLogger('src.data.data_loader')
 
-def organize_images(raw_dir, output_dir):
+def organize_images(raw_dir: str, output_dir: str) -> None:
     """
     Memindahkan file gambar .png dari struktur direktori awal ke struktur direktori baru yang terorganisir.
 
