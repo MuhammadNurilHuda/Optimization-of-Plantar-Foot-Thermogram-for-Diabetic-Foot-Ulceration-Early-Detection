@@ -1,0 +1,67 @@
+# configs\config.yaml
+
+seed: 42
+
+data:
+  base_dir: "data/processed/image enhancement"
+  tabular_path: "data/processed/[Preprocessed]Plantar Thermogram Data Analysis.csv"
+  tabular_features:
+    - Gender
+    - General_right
+    - LCA_right
+    - LPA_right
+    - MCA_right
+    - MPA_right
+    - TCI_right
+    - General_left
+    - LCA_left
+    - LPA_left
+    - MCA_left
+    - MPA_left
+    - TCI_left
+  enhancements:
+    CLAHE:
+      - "2.0_(8, 8)"
+      - "3.0_(6, 12)"
+      - "3.0_(8, 8)"
+      - "3.0_(16, 16)"
+    Gamma:
+      - "-1.5"
+      - "0.5"
+      - "1.5"
+      - "2"
+      - "5"
+    Posterize:
+      - "1"
+      - "2"
+      - "3"
+    Solarize:
+      - "64"
+      - "128"
+      - "192"
+  input_shape: [224, 224, 3]
+
+model:
+  architectures:
+    - model1
+    - model2
+    - model3
+    - model4
+  save_dir: "models/"
+  file_format: "keras"
+
+train:
+  batch_size: 8
+  epochs: 5
+  validation_split: 0.2
+  learning_rate: 0.0005
+
+split:
+  test_size: 0.2
+  validation_split: 0.2
+
+logging:
+  tensorboard_dir: "logs/tfboard/"
+  history_dir: "logs/history_csv/"
+  evaluation_dir: "logs/evaluasi_csv/"
+  final_grid_summary: "logs/grid_experiment_summary.csv"

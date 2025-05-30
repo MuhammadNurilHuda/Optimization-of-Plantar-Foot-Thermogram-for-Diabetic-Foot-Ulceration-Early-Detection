@@ -1,0 +1,253 @@
+2025-05-29 15:39:12,250 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 15:39:12,362 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 1.0, 'f1': 0.6666666666666666, 'roc_auc': 1.0}
+2025-05-29 15:39:12,502 - src.evaluation - INFO - Inference time for one sample: 0.129943 sec
+2025-05-29 15:40:19,166 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 15:40:19,273 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 1.0, 'f1': 0.6666666666666666, 'roc_auc': 1.0}
+2025-05-29 15:40:19,378 - src.evaluation - INFO - Inference time for one sample: 0.105932 sec
+2025-05-29 20:10:58,257 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 20:10:58,365 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 1.0, 'f1': 0.6666666666666666, 'roc_auc': 1.0}
+2025-05-29 20:10:58,469 - src.evaluation - INFO - Inference time for one sample: 0.103274 sec
+2025-05-29 20:56:21,021 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 20:56:21,134 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.75, 'precision': 1.0, 'recall': 0.5, 'f1': 0.6666666666666666, 'roc_auc': 1.0}
+2025-05-29 20:56:21,247 - src.evaluation - INFO - Inference time for one sample: 0.113003 sec
+2025-05-29 21:01:29,091 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 21:01:29,199 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.75, 'precision': 1.0, 'recall': 0.5, 'f1': 0.6666666666666666, 'roc_auc': 1.0}
+2025-05-29 21:01:29,304 - src.evaluation - INFO - Inference time for one sample: 0.105254 sec
+2025-05-29 21:23:37,889 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 21:23:38,003 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc': 1.0}
+2025-05-29 21:23:38,119 - src.evaluation - INFO - Inference time for one sample: 0.114444 sec
+2025-05-29 21:26:31,761 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 21:26:31,865 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 1.0, 'f1': 0.6666666666666666, 'roc_auc': 0.5}
+2025-05-29 21:26:31,984 - src.evaluation - INFO - Inference time for one sample: 0.118991 sec
+2025-05-29 21:27:35,925 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 21:27:36,049 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'roc_auc': 1.0}
+2025-05-29 21:27:36,155 - src.evaluation - INFO - Inference time for one sample: 0.106002 sec
+2025-05-29 21:43:38,493 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 21:43:38,601 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 0.5, 'f1': 0.5, 'roc_auc': 0.5}
+2025-05-29 21:43:38,704 - src.evaluation - INFO - Inference time for one sample: 0.102477 sec
+2025-05-29 23:59:11,625 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 23:59:12,064 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8529411764705882, 'precision': 0.8928571428571429, 'recall': 0.9259259259259259, 'f1': 0.9090909090909091, 'roc_auc': 0.8306878306878307}
+2025-05-29 23:59:12,125 - src.evaluation - INFO - Inference time for one sample: 0.060378 sec
+2025-05-29 23:59:12,138 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model1_eval.csv
+2025-05-29 23:59:32,867 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-29 23:59:33,464 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7352941176470589, 'precision': 0.8, 'recall': 0.8888888888888888, 'f1': 0.8421052631578947, 'roc_auc': 0.7301587301587302}
+2025-05-29 23:59:33,524 - src.evaluation - INFO - Inference time for one sample: 0.058999 sec
+2025-05-29 23:59:33,525 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model2_eval.csv
+2025-05-30 00:00:02,599 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:00:02,945 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': 0.7777777777777778}
+2025-05-30 00:00:03,002 - src.evaluation - INFO - Inference time for one sample: 0.055002 sec
+2025-05-30 00:00:03,003 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model1_eval.csv
+2025-05-30 00:00:23,561 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:00:24,193 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.8275862068965517, 'recall': 0.8888888888888888, 'f1': 0.8571428571428571, 'roc_auc': 0.6772486772486773}
+2025-05-30 00:00:24,250 - src.evaluation - INFO - Inference time for one sample: 0.057132 sec
+2025-05-30 00:00:24,256 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model2_eval.csv
+2025-05-30 00:47:07,247 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:47:07,366 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc': 1.0}
+2025-05-30 00:47:07,470 - src.evaluation - INFO - Inference time for one sample: 0.104164 sec
+2025-05-30 00:47:41,349 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:47:41,457 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.5, 'precision': 0.5, 'recall': 1.0, 'f1': 0.6666666666666666, 'roc_auc': 0.75}
+2025-05-30 00:47:41,558 - src.evaluation - INFO - Inference time for one sample: 0.101392 sec
+2025-05-30 00:48:25,612 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:48:26,051 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': 0.8253968253968255}
+2025-05-30 00:48:26,118 - src.evaluation - INFO - Inference time for one sample: 0.066478 sec
+2025-05-30 00:48:26,119 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model1_eval.csv
+2025-05-30 00:48:47,232 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:48:47,842 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': 0.8042328042328043}
+2025-05-30 00:48:47,900 - src.evaluation - INFO - Inference time for one sample: 0.057319 sec
+2025-05-30 00:48:47,901 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model2_eval.csv
+2025-05-30 00:49:14,339 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:49:14,760 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': 0.7751322751322751}
+2025-05-30 00:49:14,817 - src.evaluation - INFO - Inference time for one sample: 0.056015 sec
+2025-05-30 00:49:14,819 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model1_eval.csv
+2025-05-30 00:49:35,022 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 00:49:35,617 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.8125, 'recall': 0.9629629629629629, 'f1': 0.8813559322033898, 'roc_auc': 0.7936507936507937}
+2025-05-30 00:49:35,678 - src.evaluation - INFO - Inference time for one sample: 0.060202 sec
+2025-05-30 00:49:35,679 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model2_eval.csv
+2025-05-30 20:53:28,391 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 20:53:28,754 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8529411764705882, 'precision': 0.84375, 'recall': 1.0, 'f1': 0.9152542372881356, 'roc_auc': np.float64(0.8306878306878307)}
+2025-05-30 20:53:28,819 - src.evaluation - INFO - Inference time for one sample: 0.063753 sec
+2025-05-30 20:53:28,822 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model1_eval.csv
+2025-05-30 20:53:48,976 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 20:53:49,545 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.8064516129032258, 'recall': 0.9259259259259259, 'f1': 0.8620689655172413, 'roc_auc': np.float64(0.6613756613756614)}
+2025-05-30 20:53:49,611 - src.evaluation - INFO - Inference time for one sample: 0.064691 sec
+2025-05-30 20:53:49,612 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model2_eval.csv
+2025-05-30 20:54:11,669 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 20:54:12,020 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.8125, 'recall': 0.9629629629629629, 'f1': 0.8813559322033898, 'roc_auc': np.float64(0.7936507936507937)}
+2025-05-30 20:54:12,084 - src.evaluation - INFO - Inference time for one sample: 0.062650 sec
+2025-05-30 20:54:12,085 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model1_eval.csv
+2025-05-30 20:54:32,631 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 20:54:33,204 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.8201058201058201)}
+2025-05-30 20:54:33,273 - src.evaluation - INFO - Inference time for one sample: 0.068870 sec
+2025-05-30 20:54:33,274 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model2_eval.csv
+2025-05-30 21:18:24,592 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:18:24,934 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7592592592592593)}
+2025-05-30 21:18:24,999 - src.evaluation - INFO - Inference time for one sample: 0.065001 sec
+2025-05-30 21:18:25,000 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model1_eval.csv
+2025-05-30 21:19:10,125 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:19:10,685 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7089947089947091)}
+2025-05-30 21:19:10,752 - src.evaluation - INFO - Inference time for one sample: 0.066000 sec
+2025-05-30 21:19:10,753 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model2_eval.csv
+2025-05-30 21:20:04,307 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:20:05,161 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.798941798941799)}
+2025-05-30 21:20:05,305 - src.evaluation - INFO - Inference time for one sample: 0.143133 sec
+2025-05-30 21:20:05,306 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model3_eval.csv
+2025-05-30 21:21:20,939 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:21:21,600 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.9047619047619048)}
+2025-05-30 21:21:21,799 - src.evaluation - INFO - Inference time for one sample: 0.168431 sec
+2025-05-30 21:21:21,807 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_2.0_(8, 8)_model4_eval.csv
+2025-05-30 21:22:10,522 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:22:11,158 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7354497354497354)}
+2025-05-30 21:22:11,245 - src.evaluation - INFO - Inference time for one sample: 0.086998 sec
+2025-05-30 21:22:11,246 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(6, 12)_model1_eval.csv
+2025-05-30 21:22:59,611 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:23:00,244 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7037037037037037)}
+2025-05-30 21:23:00,359 - src.evaluation - INFO - Inference time for one sample: 0.114746 sec
+2025-05-30 21:23:00,361 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(6, 12)_model2_eval.csv
+2025-05-30 21:23:53,011 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:23:53,893 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6666666666666667)}
+2025-05-30 21:23:53,994 - src.evaluation - INFO - Inference time for one sample: 0.101210 sec
+2025-05-30 21:23:53,996 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(6, 12)_model3_eval.csv
+2025-05-30 21:24:58,717 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:24:59,292 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.8756613756613756)}
+2025-05-30 21:24:59,378 - src.evaluation - INFO - Inference time for one sample: 0.085854 sec
+2025-05-30 21:24:59,380 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(6, 12)_model4_eval.csv
+2025-05-30 21:25:48,274 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:25:48,725 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6666666666666666)}
+2025-05-30 21:25:48,812 - src.evaluation - INFO - Inference time for one sample: 0.086423 sec
+2025-05-30 21:25:48,813 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(8, 8)_model1_eval.csv
+2025-05-30 21:26:39,322 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:26:39,980 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.8677248677248677)}
+2025-05-30 21:26:40,073 - src.evaluation - INFO - Inference time for one sample: 0.091833 sec
+2025-05-30 21:26:40,074 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(8, 8)_model2_eval.csv
+2025-05-30 21:27:32,587 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:27:33,412 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.783068783068783)}
+2025-05-30 21:27:33,499 - src.evaluation - INFO - Inference time for one sample: 0.084007 sec
+2025-05-30 21:27:33,501 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(8, 8)_model3_eval.csv
+2025-05-30 21:28:37,750 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:28:38,296 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7352941176470589, 'precision': 0.78125, 'recall': 0.9259259259259259, 'f1': 0.847457627118644, 'roc_auc': np.float64(0.7671957671957672)}
+2025-05-30 21:28:38,400 - src.evaluation - INFO - Inference time for one sample: 0.103037 sec
+2025-05-30 21:28:38,402 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(8, 8)_model4_eval.csv
+2025-05-30 21:29:29,489 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:29:29,953 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.8703703703703703)}
+2025-05-30 21:29:30,036 - src.evaluation - INFO - Inference time for one sample: 0.082001 sec
+2025-05-30 21:29:30,044 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(16, 16)_model1_eval.csv
+2025-05-30 21:30:18,956 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:30:19,573 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6984126984126984)}
+2025-05-30 21:30:19,662 - src.evaluation - INFO - Inference time for one sample: 0.087818 sec
+2025-05-30 21:30:19,668 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(16, 16)_model2_eval.csv
+2025-05-30 21:31:12,128 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:31:13,022 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7619047619047619)}
+2025-05-30 21:31:13,122 - src.evaluation - INFO - Inference time for one sample: 0.098494 sec
+2025-05-30 21:31:13,124 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(16, 16)_model3_eval.csv
+2025-05-30 21:32:22,486 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:32:23,443 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6481481481481481)}
+2025-05-30 21:32:23,581 - src.evaluation - INFO - Inference time for one sample: 0.137000 sec
+2025-05-30 21:32:23,589 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/CLAHE_3.0_(16, 16)_model4_eval.csv
+2025-05-30 21:33:18,619 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:33:19,041 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.7878787878787878, 'recall': 0.9629629629629629, 'f1': 0.8666666666666667, 'roc_auc': np.float64(0.4920634920634921)}
+2025-05-30 21:33:19,116 - src.evaluation - INFO - Inference time for one sample: 0.074071 sec
+2025-05-30 21:33:19,118 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_-1.5_model1_eval.csv
+2025-05-30 21:34:12,240 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:34:13,321 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8529411764705882, 'precision': 0.8666666666666667, 'recall': 0.9629629629629629, 'f1': 0.9122807017543859, 'roc_auc': np.float64(0.671957671957672)}
+2025-05-30 21:34:13,466 - src.evaluation - INFO - Inference time for one sample: 0.143717 sec
+2025-05-30 21:34:13,474 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_-1.5_model2_eval.csv
+2025-05-30 21:35:08,621 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:35:09,503 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.5925925925925926)}
+2025-05-30 21:35:09,587 - src.evaluation - INFO - Inference time for one sample: 0.082515 sec
+2025-05-30 21:35:09,588 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_-1.5_model3_eval.csv
+2025-05-30 21:37:39,712 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:37:41,248 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8529411764705882, 'precision': 0.84375, 'recall': 1.0, 'f1': 0.9152542372881356, 'roc_auc': np.float64(0.7619047619047619)}
+2025-05-30 21:37:41,370 - src.evaluation - INFO - Inference time for one sample: 0.117780 sec
+2025-05-30 21:37:41,381 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_-1.5_model4_eval.csv
+2025-05-30 21:38:35,020 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:38:35,485 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.8518518518518519, 'recall': 0.8518518518518519, 'f1': 0.8518518518518519, 'roc_auc': np.float64(0.7407407407407407)}
+2025-05-30 21:38:35,593 - src.evaluation - INFO - Inference time for one sample: 0.106268 sec
+2025-05-30 21:38:35,595 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model1_eval.csv
+2025-05-30 21:39:27,061 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:39:27,919 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.7878787878787878, 'recall': 0.9629629629629629, 'f1': 0.8666666666666667, 'roc_auc': np.float64(0.6666666666666667)}
+2025-05-30 21:39:27,997 - src.evaluation - INFO - Inference time for one sample: 0.076995 sec
+2025-05-30 21:39:28,006 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model2_eval.csv
+2025-05-30 21:40:32,817 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:40:33,715 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.8125, 'recall': 0.9629629629629629, 'f1': 0.8813559322033898, 'roc_auc': np.float64(0.7777777777777778)}
+2025-05-30 21:40:33,855 - src.evaluation - INFO - Inference time for one sample: 0.138256 sec
+2025-05-30 21:40:33,860 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model3_eval.csv
+2025-05-30 21:41:41,001 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:41:41,722 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7058823529411765, 'precision': 0.8695652173913043, 'recall': 0.7407407407407407, 'f1': 0.8, 'roc_auc': np.float64(0.8095238095238096)}
+2025-05-30 21:41:41,837 - src.evaluation - INFO - Inference time for one sample: 0.114669 sec
+2025-05-30 21:41:41,844 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_0.5_model4_eval.csv
+2025-05-30 21:42:30,902 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:42:31,345 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7089947089947091)}
+2025-05-30 21:42:31,471 - src.evaluation - INFO - Inference time for one sample: 0.125762 sec
+2025-05-30 21:42:31,472 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_1.5_model1_eval.csv
+2025-05-30 21:43:21,708 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:43:22,464 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.8042328042328043)}
+2025-05-30 21:43:22,545 - src.evaluation - INFO - Inference time for one sample: 0.081064 sec
+2025-05-30 21:43:22,550 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_1.5_model2_eval.csv
+2025-05-30 21:44:19,917 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:44:20,890 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.46560846560846564)}
+2025-05-30 21:44:21,027 - src.evaluation - INFO - Inference time for one sample: 0.136640 sec
+2025-05-30 21:44:21,028 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_1.5_model3_eval.csv
+2025-05-30 21:45:28,128 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:45:28,773 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6111111111111112)}
+2025-05-30 21:45:28,877 - src.evaluation - INFO - Inference time for one sample: 0.103122 sec
+2025-05-30 21:45:28,880 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_1.5_model4_eval.csv
+2025-05-30 21:46:19,409 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:46:19,822 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7058823529411765, 'precision': 0.9047619047619048, 'recall': 0.7037037037037037, 'f1': 0.7916666666666666, 'roc_auc': np.float64(0.798941798941799)}
+2025-05-30 21:46:19,957 - src.evaluation - INFO - Inference time for one sample: 0.130993 sec
+2025-05-30 21:46:19,961 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_2_model1_eval.csv
+2025-05-30 21:47:07,303 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:47:07,936 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8888888888888888, 'recall': 0.8888888888888888, 'f1': 0.8888888888888888, 'roc_auc': np.float64(0.8148148148148148)}
+2025-05-30 21:47:08,021 - src.evaluation - INFO - Inference time for one sample: 0.083995 sec
+2025-05-30 21:47:08,023 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_2_model2_eval.csv
+2025-05-30 21:48:02,497 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:48:03,341 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.8181818181818182, 'recall': 1.0, 'f1': 0.9, 'roc_auc': np.float64(0.4285714285714286)}
+2025-05-30 21:48:03,447 - src.evaluation - INFO - Inference time for one sample: 0.104814 sec
+2025-05-30 21:48:03,449 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_2_model3_eval.csv
+2025-05-30 21:49:15,255 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:49:16,143 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.8835978835978835)}
+2025-05-30 21:49:16,298 - src.evaluation - INFO - Inference time for one sample: 0.128367 sec
+2025-05-30 21:49:16,307 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_2_model4_eval.csv
+2025-05-30 21:50:13,440 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:50:13,902 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.5)}
+2025-05-30 21:50:14,055 - src.evaluation - INFO - Inference time for one sample: 0.152105 sec
+2025-05-30 21:50:14,056 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_5_model1_eval.csv
+2025-05-30 21:51:16,680 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:51:17,399 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.7513227513227514)}
+2025-05-30 21:51:17,518 - src.evaluation - INFO - Inference time for one sample: 0.117254 sec
+2025-05-30 21:51:17,529 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_5_model2_eval.csv
+2025-05-30 21:52:30,777 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:52:31,860 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.6190476190476191)}
+2025-05-30 21:52:32,030 - src.evaluation - INFO - Inference time for one sample: 0.170636 sec
+2025-05-30 21:52:32,032 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_5_model3_eval.csv
+2025-05-30 21:53:43,484 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:53:44,081 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.5185185185185185)}
+2025-05-30 21:53:44,200 - src.evaluation - INFO - Inference time for one sample: 0.119180 sec
+2025-05-30 21:53:44,202 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Gamma_5_model4_eval.csv
+2025-05-30 21:54:36,962 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:54:37,420 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.8125, 'recall': 0.9629629629629629, 'f1': 0.8813559322033898, 'roc_auc': np.float64(0.6719576719576721)}
+2025-05-30 21:54:37,564 - src.evaluation - INFO - Inference time for one sample: 0.143698 sec
+2025-05-30 21:54:37,566 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_1_model1_eval.csv
+2025-05-30 21:55:28,891 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:55:29,856 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.8235294117647058, 'precision': 0.92, 'recall': 0.8518518518518519, 'f1': 0.8846153846153846, 'roc_auc': np.float64(0.8359788359788359)}
+2025-05-30 21:55:30,027 - src.evaluation - INFO - Inference time for one sample: 0.169639 sec
+2025-05-30 21:55:30,029 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_1_model2_eval.csv
+2025-05-30 21:56:25,772 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:56:26,701 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.5978835978835979)}
+2025-05-30 21:56:26,845 - src.evaluation - INFO - Inference time for one sample: 0.144481 sec
+2025-05-30 21:56:26,864 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_1_model3_eval.csv
+2025-05-30 21:57:37,920 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:57:38,511 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7647058823529411, 'precision': 0.8275862068965517, 'recall': 0.8888888888888888, 'f1': 0.8571428571428571, 'roc_auc': np.float64(0.8148148148148148)}
+2025-05-30 21:57:38,596 - src.evaluation - INFO - Inference time for one sample: 0.085494 sec
+2025-05-30 21:57:38,598 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_1_model4_eval.csv
+2025-05-30 21:58:34,161 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:58:34,625 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.783068783068783)}
+2025-05-30 21:58:34,749 - src.evaluation - INFO - Inference time for one sample: 0.122267 sec
+2025-05-30 21:58:34,751 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_2_model1_eval.csv
+2025-05-30 21:59:23,194 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 21:59:23,879 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.8571428571428571, 'recall': 0.8888888888888888, 'f1': 0.8727272727272727, 'roc_auc': np.float64(0.7195767195767195)}
+2025-05-30 21:59:23,979 - src.evaluation - INFO - Inference time for one sample: 0.098773 sec
+2025-05-30 21:59:23,980 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_2_model2_eval.csv
+2025-05-30 22:00:21,871 - src.evaluation - INFO - Evaluasi model pada test set...
+2025-05-30 22:00:22,832 - src.evaluation - INFO - Hasil evaluasi: {'accuracy': 0.7941176470588235, 'precision': 0.7941176470588235, 'recall': 1.0, 'f1': 0.8852459016393442, 'roc_auc': np.float64(0.582010582010582)}
+2025-05-30 22:00:23,051 - src.evaluation - INFO - Inference time for one sample: 0.218124 sec
+2025-05-30 22:00:23,061 - src.evaluation - INFO - Hasil evaluasi disimpan di logs/evaluasi_csv/Posterize_2_model3_eval.csv

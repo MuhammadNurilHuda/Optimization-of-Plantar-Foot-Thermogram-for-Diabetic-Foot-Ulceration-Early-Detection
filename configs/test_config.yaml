@@ -1,0 +1,46 @@
+data:
+  base_dir: data/processed/image enhancement
+  enhancements:
+    CLAHE:
+    - 2.0_(8, 8)
+    Gamma:
+    - '0.5'
+  input_shape:
+  - 224
+  - 224
+  - 3
+  tabular_features:
+  - Gender
+  - General_right
+  - LCA_right
+  - LPA_right
+  - MCA_right
+  - MPA_right
+  - TCI_right
+  - General_left
+  - LCA_left
+  - LPA_left
+  - MCA_left
+  - MPA_left
+  - TCI_left
+  tabular_path: data/processed/[Preprocessed]Plantar Thermogram Data Analysis.csv
+logging:
+  evaluation_dir: logs/evaluasi_csv/
+  final_grid_summary: logs/grid_experiment_summary.csv
+  history_dir: logs/history_csv/
+  tensorboard_dir: logs/tfboard/
+model:
+  architectures:
+  - model1
+  - model2
+  file_format: keras
+  save_dir: models/
+seed: 42
+split:
+  test_size: 0.2
+  validation_split: 0.2
+train:
+  batch_size: 16
+  epochs: 2
+  learning_rate: 0.0005
+  validation_split: 0.2

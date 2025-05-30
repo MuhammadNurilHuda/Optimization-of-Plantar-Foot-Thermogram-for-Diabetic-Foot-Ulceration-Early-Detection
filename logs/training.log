@@ -1,0 +1,262 @@
+2025-05-29 15:39:12,508 - src.training - INFO - Mulai training: dummy_model
+2025-05-29 15:39:14,435 - src.training - INFO - Training selesai dalam 1.86 detik.
+2025-05-29 15:39:14,561 - src.training - INFO - Model disimpan di tests/temp_model.h5
+2025-05-29 15:40:21,298 - src.training - INFO - Mulai training: dummy_model
+2025-05-29 15:40:23,132 - src.training - INFO - Training selesai dalam 1.77 detik.
+2025-05-29 15:40:23,193 - src.training - INFO - Model disimpan di tests/temp_model.h5
+2025-05-29 20:11:00,336 - src.training - INFO - Mulai training: dummy_model
+2025-05-29 20:11:02,108 - src.training - INFO - Training selesai dalam 1.71 detik.
+2025-05-29 20:11:02,133 - src.training - INFO - Model disimpan di tests/temp_model.h5
+2025-05-29 20:56:23,316 - src.training - INFO - Mulai training: dummy_model
+2025-05-29 20:56:25,076 - src.training - INFO - Training selesai dalam 1.70 detik.
+2025-05-29 20:56:25,120 - src.training - INFO - Model disimpan di tests/temp_model.h5
+2025-05-29 21:01:31,150 - src.training - INFO - Mulai training: test_model
+2025-05-29 21:01:35,961 - src.training - INFO - Training selesai dalam 4.66 detik.
+2025-05-29 21:01:40,530 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-29 21:01:40,579 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-29 21:23:40,104 - src.training - INFO - Mulai training: test_model
+2025-05-29 21:23:44,322 - src.training - INFO - Training selesai dalam 4.09 detik.
+2025-05-29 21:23:48,094 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-29 21:23:48,099 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-29 21:26:33,796 - src.training - INFO - Mulai training: test_model
+2025-05-29 21:26:37,912 - src.training - INFO - Training selesai dalam 4.00 detik.
+2025-05-29 21:26:42,532 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-29 21:26:42,535 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-29 21:27:38,095 - src.training - INFO - Mulai training: test_model
+2025-05-29 21:27:42,191 - src.training - INFO - Training selesai dalam 3.98 detik.
+2025-05-29 21:27:46,312 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-29 21:27:46,315 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-29 21:43:40,768 - src.training - INFO - Mulai training: test_model
+2025-05-29 21:43:45,083 - src.training - INFO - Training selesai dalam 4.20 detik.
+2025-05-29 21:43:49,747 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-29 21:43:49,748 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-29 23:58:52,430 - src.training - INFO - Mulai training: model1
+2025-05-29 23:59:06,198 - src.training - INFO - Training selesai dalam 13.59 detik.
+2025-05-29 23:59:11,566 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model1.keras
+2025-05-29 23:59:11,599 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model1_history.csv
+2025-05-29 23:59:12,143 - src.training - INFO - Mulai training: model2
+2025-05-29 23:59:30,328 - src.training - INFO - Training selesai dalam 18.08 detik.
+2025-05-29 23:59:32,858 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model2.keras
+2025-05-29 23:59:32,861 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model2_history.csv
+2025-05-29 23:59:40,539 - src.training - INFO - Mulai training: model1
+2025-05-29 23:59:57,855 - src.training - INFO - Training selesai dalam 17.20 detik.
+2025-05-30 00:00:02,578 - src.training - INFO - Model disimpan di models/Gamma\0.5\model1.keras
+2025-05-30 00:00:02,582 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model1_history.csv
+2025-05-30 00:00:03,008 - src.training - INFO - Mulai training: model2
+2025-05-30 00:00:21,629 - src.training - INFO - Training selesai dalam 18.50 detik.
+2025-05-30 00:00:23,549 - src.training - INFO - Model disimpan di models/Gamma\0.5\model2.keras
+2025-05-30 00:00:23,551 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model2_history.csv
+2025-05-30 00:47:09,592 - src.training - INFO - Mulai training: test_model
+2025-05-30 00:47:13,993 - src.training - INFO - Training selesai dalam 4.28 detik.
+2025-05-30 00:47:17,659 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-30 00:47:17,660 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-30 00:47:43,509 - src.training - INFO - Mulai training: test_model
+2025-05-30 00:47:47,756 - src.training - INFO - Training selesai dalam 4.13 detik.
+2025-05-30 00:47:51,129 - src.training - INFO - Model disimpan di tests/temp_model.keras
+2025-05-30 00:47:51,131 - src.training - INFO - Training history disimpan di tests/temp_history.csv
+2025-05-30 00:48:07,090 - src.training - INFO - Mulai training: model1
+2025-05-30 00:48:21,176 - src.training - INFO - Training selesai dalam 13.91 detik.
+2025-05-30 00:48:25,594 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model1.keras
+2025-05-30 00:48:25,596 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model1_history.csv
+2025-05-30 00:48:26,125 - src.training - INFO - Mulai training: model2
+2025-05-30 00:48:45,688 - src.training - INFO - Training selesai dalam 19.42 detik.
+2025-05-30 00:48:47,222 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model2.keras
+2025-05-30 00:48:47,225 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model2_history.csv
+2025-05-30 00:48:50,898 - src.training - INFO - Mulai training: model1
+2025-05-30 00:49:03,702 - src.training - INFO - Training selesai dalam 12.68 detik.
+2025-05-30 00:49:14,322 - src.training - INFO - Model disimpan di models/Gamma\0.5\model1.keras
+2025-05-30 00:49:14,323 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model1_history.csv
+2025-05-30 00:49:14,825 - src.training - INFO - Mulai training: model2
+2025-05-30 00:49:32,943 - src.training - INFO - Training selesai dalam 18.00 detik.
+2025-05-30 00:49:35,014 - src.training - INFO - Model disimpan di models/Gamma\0.5\model2.keras
+2025-05-30 00:49:35,016 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model2_history.csv
+2025-05-30 20:53:11,497 - src.training - INFO - Mulai training: model1
+2025-05-30 20:53:25,257 - src.training - INFO - Training selesai dalam 13.52 detik.
+2025-05-30 20:53:28,377 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model1.keras
+2025-05-30 20:53:28,381 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model1_history.csv
+2025-05-30 20:53:28,828 - src.training - INFO - Mulai training: model2
+2025-05-30 20:53:47,423 - src.training - INFO - Training selesai dalam 18.50 detik.
+2025-05-30 20:53:48,970 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model2.keras
+2025-05-30 20:53:48,972 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model2_history.csv
+2025-05-30 20:53:55,136 - src.training - INFO - Mulai training: model1
+2025-05-30 20:54:08,495 - src.training - INFO - Training selesai dalam 13.23 detik.
+2025-05-30 20:54:11,652 - src.training - INFO - Model disimpan di models/Gamma\0.5\model1.keras
+2025-05-30 20:54:11,653 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model1_history.csv
+2025-05-30 20:54:12,091 - src.training - INFO - Mulai training: model2
+2025-05-30 20:54:31,153 - src.training - INFO - Training selesai dalam 18.96 detik.
+2025-05-30 20:54:32,623 - src.training - INFO - Model disimpan di models/Gamma\0.5\model2.keras
+2025-05-30 20:54:32,625 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model2_history.csv
+2025-05-30 21:17:41,901 - src.training - INFO - Mulai training: model1
+2025-05-30 21:18:21,391 - src.training - INFO - Training selesai dalam 39.35 detik.
+2025-05-30 21:18:24,581 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model1.keras
+2025-05-30 21:18:24,583 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model1_history.csv
+2025-05-30 21:18:25,006 - src.training - INFO - Mulai training: model2
+2025-05-30 21:19:08,657 - src.training - INFO - Training selesai dalam 43.55 detik.
+2025-05-30 21:19:10,116 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model2.keras
+2025-05-30 21:19:10,119 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model2_history.csv
+2025-05-30 21:19:10,761 - src.training - INFO - Mulai training: model3
+2025-05-30 21:20:03,736 - src.training - INFO - Training selesai dalam 52.77 detik.
+2025-05-30 21:20:04,302 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model3.keras
+2025-05-30 21:20:04,303 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model3_history.csv
+2025-05-30 21:20:05,314 - src.training - INFO - Mulai training: model4
+2025-05-30 21:21:14,352 - src.training - INFO - Training selesai dalam 68.89 detik.
+2025-05-30 21:21:20,836 - src.training - INFO - Model disimpan di models/CLAHE\2.0_(8, 8)\model4.keras
+2025-05-30 21:21:20,902 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_2.0_(8, 8)_model4_history.csv
+2025-05-30 21:21:28,322 - src.training - INFO - Mulai training: model1
+2025-05-30 21:22:06,803 - src.training - INFO - Training selesai dalam 38.34 detik.
+2025-05-30 21:22:10,507 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(6, 12)\model1.keras
+2025-05-30 21:22:10,508 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(6, 12)_model1_history.csv
+2025-05-30 21:22:11,254 - src.training - INFO - Mulai training: model2
+2025-05-30 21:22:57,958 - src.training - INFO - Training selesai dalam 46.58 detik.
+2025-05-30 21:22:59,601 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(6, 12)\model2.keras
+2025-05-30 21:22:59,602 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(6, 12)_model2_history.csv
+2025-05-30 21:23:00,369 - src.training - INFO - Mulai training: model3
+2025-05-30 21:23:52,126 - src.training - INFO - Training selesai dalam 51.63 detik.
+2025-05-30 21:23:53,003 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(6, 12)\model3.keras
+2025-05-30 21:23:53,005 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(6, 12)_model3_history.csv
+2025-05-30 21:23:54,005 - src.training - INFO - Mulai training: model4
+2025-05-30 21:24:52,245 - src.training - INFO - Training selesai dalam 58.10 detik.
+2025-05-30 21:24:58,703 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(6, 12)\model4.keras
+2025-05-30 21:24:58,705 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(6, 12)_model4_history.csv
+2025-05-30 21:25:05,385 - src.training - INFO - Mulai training: model1
+2025-05-30 21:25:44,340 - src.training - INFO - Training selesai dalam 38.85 detik.
+2025-05-30 21:25:48,258 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(8, 8)\model1.keras
+2025-05-30 21:25:48,260 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(8, 8)_model1_history.csv
+2025-05-30 21:25:48,821 - src.training - INFO - Mulai training: model2
+2025-05-30 21:26:37,674 - src.training - INFO - Training selesai dalam 48.72 detik.
+2025-05-30 21:26:39,310 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(8, 8)\model2.keras
+2025-05-30 21:26:39,312 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(8, 8)_model2_history.csv
+2025-05-30 21:26:40,084 - src.training - INFO - Mulai training: model3
+2025-05-30 21:27:31,793 - src.training - INFO - Training selesai dalam 51.56 detik.
+2025-05-30 21:27:32,579 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(8, 8)\model3.keras
+2025-05-30 21:27:32,581 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(8, 8)_model3_history.csv
+2025-05-30 21:27:33,515 - src.training - INFO - Mulai training: model4
+2025-05-30 21:28:31,226 - src.training - INFO - Training selesai dalam 57.52 detik.
+2025-05-30 21:28:37,727 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(8, 8)\model4.keras
+2025-05-30 21:28:37,733 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(8, 8)_model4_history.csv
+2025-05-30 21:28:45,192 - src.training - INFO - Mulai training: model1
+2025-05-30 21:29:24,168 - src.training - INFO - Training selesai dalam 38.86 detik.
+2025-05-30 21:29:29,414 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(16, 16)\model1.keras
+2025-05-30 21:29:29,452 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(16, 16)_model1_history.csv
+2025-05-30 21:29:30,056 - src.training - INFO - Mulai training: model2
+2025-05-30 21:30:17,299 - src.training - INFO - Training selesai dalam 47.12 detik.
+2025-05-30 21:30:18,943 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(16, 16)\model2.keras
+2025-05-30 21:30:18,951 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(16, 16)_model2_history.csv
+2025-05-30 21:30:19,682 - src.training - INFO - Mulai training: model3
+2025-05-30 21:31:11,325 - src.training - INFO - Training selesai dalam 51.48 detik.
+2025-05-30 21:31:12,122 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(16, 16)\model3.keras
+2025-05-30 21:31:12,124 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(16, 16)_model3_history.csv
+2025-05-30 21:31:13,136 - src.training - INFO - Mulai training: model4
+2025-05-30 21:32:11,051 - src.training - INFO - Training selesai dalam 57.75 detik.
+2025-05-30 21:32:22,469 - src.training - INFO - Model disimpan di models/CLAHE\3.0_(16, 16)\model4.keras
+2025-05-30 21:32:22,471 - src.training - INFO - Training history disimpan di logs/history_csv/CLAHE_3.0_(16, 16)_model4_history.csv
+2025-05-30 21:32:30,883 - src.training - INFO - Mulai training: model1
+2025-05-30 21:33:08,958 - src.training - INFO - Training selesai dalam 37.91 detik.
+2025-05-30 21:33:18,609 - src.training - INFO - Model disimpan di models/Gamma\-1.5\model1.keras
+2025-05-30 21:33:18,611 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_-1.5_model1_history.csv
+2025-05-30 21:33:19,126 - src.training - INFO - Mulai training: model2
+2025-05-30 21:34:04,418 - src.training - INFO - Training selesai dalam 45.16 detik.
+2025-05-30 21:34:12,232 - src.training - INFO - Model disimpan di models/Gamma\-1.5\model2.keras
+2025-05-30 21:34:12,233 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_-1.5_model2_history.csv
+2025-05-30 21:34:13,484 - src.training - INFO - Mulai training: model3
+2025-05-30 21:35:05,019 - src.training - INFO - Training selesai dalam 51.41 detik.
+2025-05-30 21:35:08,611 - src.training - INFO - Model disimpan di models/Gamma\-1.5\model3.keras
+2025-05-30 21:35:08,613 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_-1.5_model3_history.csv
+2025-05-30 21:35:09,597 - src.training - INFO - Mulai training: model4
+2025-05-30 21:36:08,934 - src.training - INFO - Training selesai dalam 59.20 detik.
+2025-05-30 21:37:39,592 - src.training - INFO - Model disimpan di models/Gamma\-1.5\model4.keras
+2025-05-30 21:37:39,655 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_-1.5_model4_history.csv
+2025-05-30 21:37:46,763 - src.training - INFO - Mulai training: model1
+2025-05-30 21:38:26,247 - src.training - INFO - Training selesai dalam 39.33 detik.
+2025-05-30 21:38:35,000 - src.training - INFO - Model disimpan di models/Gamma\0.5\model1.keras
+2025-05-30 21:38:35,002 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model1_history.csv
+2025-05-30 21:38:35,611 - src.training - INFO - Mulai training: model2
+2025-05-30 21:39:24,360 - src.training - INFO - Training selesai dalam 48.62 detik.
+2025-05-30 21:39:27,039 - src.training - INFO - Model disimpan di models/Gamma\0.5\model2.keras
+2025-05-30 21:39:27,046 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model2_history.csv
+2025-05-30 21:39:28,022 - src.training - INFO - Mulai training: model3
+2025-05-30 21:40:31,735 - src.training - INFO - Training selesai dalam 63.59 detik.
+2025-05-30 21:40:32,808 - src.training - INFO - Model disimpan di models/Gamma\0.5\model3.keras
+2025-05-30 21:40:32,811 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model3_history.csv
+2025-05-30 21:40:33,882 - src.training - INFO - Mulai training: model4
+2025-05-30 21:41:33,946 - src.training - INFO - Training selesai dalam 59.82 detik.
+2025-05-30 21:41:40,982 - src.training - INFO - Model disimpan di models/Gamma\0.5\model4.keras
+2025-05-30 21:41:40,983 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_0.5_model4_history.csv
+2025-05-30 21:41:48,646 - src.training - INFO - Mulai training: model1
+2025-05-30 21:42:27,121 - src.training - INFO - Training selesai dalam 38.29 detik.
+2025-05-30 21:42:30,890 - src.training - INFO - Model disimpan di models/Gamma\1.5\model1.keras
+2025-05-30 21:42:30,892 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_1.5_model1_history.csv
+2025-05-30 21:42:31,494 - src.training - INFO - Mulai training: model2
+2025-05-30 21:43:20,048 - src.training - INFO - Training selesai dalam 48.41 detik.
+2025-05-30 21:43:21,700 - src.training - INFO - Model disimpan di models/Gamma\1.5\model2.keras
+2025-05-30 21:43:21,703 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_1.5_model2_history.csv
+2025-05-30 21:43:22,568 - src.training - INFO - Mulai training: model3
+2025-05-30 21:44:19,008 - src.training - INFO - Training selesai dalam 56.33 detik.
+2025-05-30 21:44:19,906 - src.training - INFO - Model disimpan di models/Gamma\1.5\model3.keras
+2025-05-30 21:44:19,909 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_1.5_model3_history.csv
+2025-05-30 21:44:21,040 - src.training - INFO - Mulai training: model4
+2025-05-30 21:45:21,567 - src.training - INFO - Training selesai dalam 60.37 detik.
+2025-05-30 21:45:28,107 - src.training - INFO - Model disimpan di models/Gamma\1.5\model4.keras
+2025-05-30 21:45:28,111 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_1.5_model4_history.csv
+2025-05-30 21:45:35,370 - src.training - INFO - Mulai training: model1
+2025-05-30 21:46:14,964 - src.training - INFO - Training selesai dalam 39.46 detik.
+2025-05-30 21:46:19,388 - src.training - INFO - Model disimpan di models/Gamma\2\model1.keras
+2025-05-30 21:46:19,398 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_2_model1_history.csv
+2025-05-30 21:46:19,976 - src.training - INFO - Mulai training: model2
+2025-05-30 21:47:05,670 - src.training - INFO - Training selesai dalam 45.57 detik.
+2025-05-30 21:47:07,294 - src.training - INFO - Model disimpan di models/Gamma\2\model2.keras
+2025-05-30 21:47:07,298 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_2_model2_history.csv
+2025-05-30 21:47:08,043 - src.training - INFO - Mulai training: model3
+2025-05-30 21:48:01,419 - src.training - INFO - Training selesai dalam 53.21 detik.
+2025-05-30 21:48:02,490 - src.training - INFO - Model disimpan di models/Gamma\2\model3.keras
+2025-05-30 21:48:02,492 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_2_model3_history.csv
+2025-05-30 21:48:03,459 - src.training - INFO - Mulai training: model4
+2025-05-30 21:49:03,558 - src.training - INFO - Training selesai dalam 59.91 detik.
+2025-05-30 21:49:15,114 - src.training - INFO - Model disimpan di models/Gamma\2\model4.keras
+2025-05-30 21:49:15,212 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_2_model4_history.csv
+2025-05-30 21:49:24,083 - src.training - INFO - Mulai training: model1
+2025-05-30 21:50:04,238 - src.training - INFO - Training selesai dalam 40.04 detik.
+2025-05-30 21:50:13,429 - src.training - INFO - Model disimpan di models/Gamma\5\model1.keras
+2025-05-30 21:50:13,430 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_5_model1_history.csv
+2025-05-30 21:50:14,065 - src.training - INFO - Mulai training: model2
+2025-05-30 21:51:01,962 - src.training - INFO - Training selesai dalam 47.65 detik.
+2025-05-30 21:51:16,672 - src.training - INFO - Model disimpan di models/Gamma\5\model2.keras
+2025-05-30 21:51:16,674 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_5_model2_history.csv
+2025-05-30 21:51:17,546 - src.training - INFO - Mulai training: model3
+2025-05-30 21:52:28,564 - src.training - INFO - Training selesai dalam 70.86 detik.
+2025-05-30 21:52:30,768 - src.training - INFO - Model disimpan di models/Gamma\5\model3.keras
+2025-05-30 21:52:30,769 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_5_model3_history.csv
+2025-05-30 21:52:32,055 - src.training - INFO - Mulai training: model4
+2025-05-30 21:53:32,098 - src.training - INFO - Training selesai dalam 59.85 detik.
+2025-05-30 21:53:43,454 - src.training - INFO - Model disimpan di models/Gamma\5\model4.keras
+2025-05-30 21:53:43,469 - src.training - INFO - Training history disimpan di logs/history_csv/Gamma_5_model4_history.csv
+2025-05-30 21:53:50,605 - src.training - INFO - Mulai training: model1
+2025-05-30 21:54:30,736 - src.training - INFO - Training selesai dalam 39.95 detik.
+2025-05-30 21:54:36,951 - src.training - INFO - Model disimpan di models/Posterize\1\model1.keras
+2025-05-30 21:54:36,954 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_1_model1_history.csv
+2025-05-30 21:54:37,579 - src.training - INFO - Mulai training: model2
+2025-05-30 21:55:25,547 - src.training - INFO - Training selesai dalam 46.64 detik.
+2025-05-30 21:55:28,878 - src.training - INFO - Model disimpan di models/Posterize\1\model2.keras
+2025-05-30 21:55:28,879 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_1_model2_history.csv
+2025-05-30 21:55:30,044 - src.training - INFO - Mulai training: model3
+2025-05-30 21:56:24,411 - src.training - INFO - Training selesai dalam 54.19 detik.
+2025-05-30 21:56:25,764 - src.training - INFO - Model disimpan di models/Posterize\1\model3.keras
+2025-05-30 21:56:25,765 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_1_model3_history.csv
+2025-05-30 21:56:26,883 - src.training - INFO - Mulai training: model4
+2025-05-30 21:57:27,069 - src.training - INFO - Training selesai dalam 60.03 detik.
+2025-05-30 21:57:37,892 - src.training - INFO - Model disimpan di models/Posterize\1\model4.keras
+2025-05-30 21:57:37,895 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_1_model4_history.csv
+2025-05-30 21:57:45,242 - src.training - INFO - Mulai training: model1
+2025-05-30 21:58:27,377 - src.training - INFO - Training selesai dalam 42.01 detik.
+2025-05-30 21:58:34,131 - src.training - INFO - Model disimpan di models/Posterize\2\model1.keras
+2025-05-30 21:58:34,133 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_2_model1_history.csv
+2025-05-30 21:58:34,763 - src.training - INFO - Mulai training: model2
+2025-05-30 21:59:20,845 - src.training - INFO - Training selesai dalam 45.95 detik.
+2025-05-30 21:59:23,185 - src.training - INFO - Model disimpan di models/Posterize\2\model2.keras
+2025-05-30 21:59:23,189 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_2_model2_history.csv
+2025-05-30 21:59:23,988 - src.training - INFO - Mulai training: model3
+2025-05-30 22:00:20,435 - src.training - INFO - Training selesai dalam 56.06 detik.
+2025-05-30 22:00:21,866 - src.training - INFO - Model disimpan di models/Posterize\2\model3.keras
+2025-05-30 22:00:21,867 - src.training - INFO - Training history disimpan di logs/history_csv/Posterize_2_model3_history.csv
+2025-05-30 22:00:23,075 - src.training - INFO - Mulai training: model4
+2025-05-30 22:01:24,569 - src.training - INFO - Training selesai dalam 61.32 detik.
