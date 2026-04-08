@@ -1,378 +1,278 @@
-# Optimasi Termogram Telapak Kaki Untuk Deteksi Dini Ulkus Kaki Diabetik: Pendekatan Peningkatan Citra
+# Optimization of Plantar Foot Thermogram for Diabetic Foot Ulceration Early Detection: An Image Enhancement Approach
 
-## Deskripsi Proyek
 
-Proyek ini mengembangkan pipeline Machine Learning yang komprehensif untuk deteksi dini ulkus kaki diabetes (Diabetic Foot Ulcer/DFU) menggunakan citra termogram dan data suhu telapak kaki. Sistem ini menggabungkan Convolutional Neural Network (CNN) untuk memproses citra termogram bilateral (kiri dan kanan) dengan data klinis tabular, menggunakan arsitektur multi-input deep learning.
+## Overview
 
-Dataset yang digunakan merupakan data publik yang diterbitkan oleh Hernandez-Contreras et al. (DOI:10.1109/ACCESS.2019.2951356).
+This repository contains the research codebase for a deep learning pipeline that supports early detection of diabetic foot ulceration (DFU) from plantar thermogram images and tabular plantar temperature measurements.
 
-### Fitur Utama Pipeline
+The project combines:
 
-- **Grid Search Otomatis**: Eksperimen sistematis dengan 4 metode enhancement × multiple parameters × 4 arsitektur model
-- **Dual-Input CNN**: Memproses citra termogram kaki kiri dan kanan secara bersamaan
-- **Multi-Modal Learning**: Integrasi data citra dengan 13 fitur suhu tabular
-- **Production-Ready**: Modular, scalable, dengan logging dan testing komprehensif
-- **Real-time Monitoring**: Track progress eksperimen dan visualisasi hasil
+- Bilateral plantar thermogram images (left and right foot)
+- Structured plantar temperature features
+- Multiple image enhancement strategies
+- Multi-input deep learning models for binary classification
 
-## Struktur Proyek
+The study goal is to improve the quality of thermal pattern representation before training, while preserving clinically relevant thermal information for DFU-related risk discrimination.
 
+## Research Context
+
+Diabetes mellitus can lead to severe complications, including diabetic foot ulcers. In this work, thermographic imaging is used as a non-invasive modality for early risk detection. The experimental pipeline evaluates whether image enhancement improves the downstream classification performance of a multimodal model that integrates:
+
+- convolutional neural networks (CNNs) for left and right plantar thermograms, and
+- dense neural layers for tabular plantar temperature features.
+
+Based on the reported study results associated with this repository:
+
+- solarize was the most effective enhancement strategy across the tested methods,
+- the best models reached `97.06%` accuracy, and
+- the best reported AUC was `1.000`.
+
+These findings support the use of enhancement-aware thermogram preprocessing for improving both predictive performance and computational efficiency in DFU screening experiments.
+
+## Dataset
+
+The repository is built around the plantar thermogram dataset referenced in the project abstract and local data files. The codebase currently expects:
+
+- raw thermogram assets under [data/raw](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/data/raw)
+- an analysis table under [data/external/Plantar Thermogram Data Analysis.csv](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/data/external/Plantar%20Thermogram%20Data%20Analysis.csv)
+
+The local raw dataset structure includes control (`CG...`) and diabetes (`DM...`) subjects, with left and right plantar images named using the convention:
+
+```text
+<Subject>_<Gender>_L.png
+<Subject>_<Gender>_R.png
 ```
-project_root/
-├── configs/
-│   ├── config.yaml          # Konfigurasi utama eksperimen
-│   ├── test_config.yaml     # Konfigurasi untuk test run
-│   └── logging.conf         # Konfigurasi logging
-├── data/
-│   ├── external/            # Data mentah original
-│   │   └── Plantar Thermogram Data Analysis.csv
-│   └── processed/           # Data yang sudah diproses
-│       ├── [Preprocessed]Plantar Thermogram Data Analysis.csv
-│       └── image enhancement/
-│           ├── CLAHE/
-│           │   ├── 2.0_(8, 8)/
-│           │   ├── 3.0_(6, 12)/
-│           │   └── ...
-│           ├── Gamma/
-│           ├── Posterize/
-│           └── Solarize/
+
+where `Gender` is encoded as `M` or `F` in file names.
+
+## Method Summary
+
+### Inputs
+
+- Left plantar thermogram image
+- Right plantar thermogram image
+- 13 tabular features:
+  - `Gender`
+  - `General_right`, `LCA_right`, `LPA_right`, `MCA_right`, `MPA_right`, `TCI_right`
+  - `General_left`, `LCA_left`, `LPA_left`, `MCA_left`, `MPA_left`, `TCI_left`
+
+### Classification setup
+
+- Binary label creation is subject based:
+  - `DM* -> 1`
+  - `CG* -> 0`
+- Images are resized and normalized to `[0, 1]`
+- Tabular features are standardized with `StandardScaler`
+
+### Image enhancement methods implemented
+
+- `CLAHE`
+- `Gamma`
+- `Posterize`
+- `Solarize`
+
+The currently configured parameter grid in [configs/config.yaml](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/configs/config.yaml) is:
+
+- `CLAHE`: `2.0_(8, 8)`, `3.0_(6, 12)`, `3.0_(8, 8)`, `3.0_(16, 16)`
+- `Gamma`: `-1.5`, `0.5`, `1.5`, `2`, `5`
+- `Posterize`: `1`, `2`, `3`
+- `Solarize`: `64`, `128`, `192`
+
+### Model family
+
+The repository defines four multi-input neural network variants in [src/models](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/models):
+
+- `model1`: shallow bilateral CNN + tabular branch
+- `model2`: deeper bilateral CNN + deeper tabular branch
+- `model3`: deepest bilateral CNN among the current variants
+- `model4`: asymmetric left/right image branches with deeper tabular branch
+
+All four models output a single sigmoid score for binary classification.
+
+## Repository Structure
+
+```text
+.
+├── configs/                  Experiment and logging configuration
+├── data/                     Raw and external data tracked in the repository
+├── notebooks/                Research notebooks and exploratory experiments
+├── scripts/                  Shell helpers for train / predict / evaluate
 ├── src/
-│   ├── __init__.py
+│   ├── apply_image_enhancement.py
+│   ├── evaluation.py
+│   ├── experiment_runner.py
+│   ├── predict.py
+│   ├── training.py
 │   ├── data/
-│   │   ├── __init__.py
-│   │   ├── data_split.py           # Train-test splitting
-│   │   ├── image_loader.py         # Termogram image loader
-│   │   └── tabular_preprocess.py   # Tabular data preprocessing
 │   ├── models/
-│   │   ├── __init__.py
-│   │   ├── model1/                 # Arsitektur model 1
-│   │   │   └── model1.py
-│   │   ├── model2/                 # Arsitektur model 2
-│   │   ├── model3/                 # Arsitektur model 3
-│   │   └── model4/                 # Arsitektur model 4
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   ├── image_enhancement.py    # CLAHE, Gamma, Posterize, Solarize
-│   │   └── metrics.py              # Evaluasi dan visualisasi
-│   ├── evaluation.py               # Model evaluation
-│   ├── experiment_runner.py        # Grid search runner
-│   ├── predict.py                  # Inference untuk data baru
-│   └── training.py                 # Training pipeline
-├── tests/
-│   ├── __init__.py
-│   ├── test_data_loader.py
-│   ├── test_image_enhancement.py
-│   ├── test_models.py
-│   ├── test_predict.py
-│   ├── test_tabular_preprocess.py
-│   └── test_training.py
-├── logs/
-│   ├── tfboard/                    # TensorBoard logs
-│   ├── history_csv/                # Training history
-│   ├── evaluasi_csv/               # Evaluation results
-│   └── grid_experiment_summary.csv # Grid search summary
-├── models/                         # Saved models
-├── main.py                         # Main entry point
-├── monitor_progress.py             # Real-time monitoring
-├── analyze_results.py              # Post-experiment analysis
-├── requirements.txt
-├── README.md
-└── .gitignore
+│   └── utils/
+├── tests/                    Unit tests for core pipeline components
+├── main.py                   Main experiment entry point
+├── test_run.py               Generates a reduced experiment config
+└── README.md
 ```
 
-## Model Architectures
+## Core Pipeline
 
-Proyek ini mengimplementasikan 4 arsitektur CNN-Tabular yang berbeda:
+### 1. Image enhancement
 
-- **Model 1**: Basic CNN + Dense layers
-- **Model 2**: Deeper CNN with batch normalization
-- **Model 3**: CNN with spatial dropout
-- **Model 4**: Advanced architecture with regularization
+[src/apply_image_enhancement.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/apply_image_enhancement.py) applies the implemented enhancement methods to image directories and saves enhanced outputs by method and parameter setting.
 
-Setiap model menerima 3 input:
+### 2. Data loading and preprocessing
 
-1. Citra termogram kaki kiri (224×224×3)
-2. Citra termogram kaki kanan (224×224×3)
-3. Data tabular 13 fitur suhu
+- [src/data/image_loader.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/data/image_loader.py) loads paired left/right images using dataset naming conventions
+- [src/data/tabular_preprocess.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/data/tabular_preprocess.py) converts gender, creates labels, and scales tabular data
+- [src/data/data_split.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/data/data_split.py) splits multimodal arrays into train/test partitions
 
-## Tech Stack
+### 3. Training
 
-### **Deep Learning Framework**
+[src/training.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/training.py) compiles a chosen architecture, trains it with early stopping, and stores model/history artifacts.
 
-- **TensorFlow 2.10+** - Primary deep learning framework
-- **Keras API** - High-level neural network API
-- **CUDA 11.2+** - GPU acceleration support
+### 4. Evaluation
 
-### **Data Science & ML Libraries**
+[src/evaluation.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/evaluation.py) computes accuracy, precision, recall, F1, ROC AUC, and single-sample inference time.
 
-- **NumPy** - Numerical computing and array operations
-- **Pandas** - Data manipulation and analysis
-- **Scikit-learn** - Machine learning utilities (train-test split, metrics, preprocessing)
-- **Scikit-image** - Image processing and enhancement
-- **OpenCV** - Advanced computer vision operations
+### 5. Grid experiment execution
 
-### **Visualization & Monitoring**
+[src/experiment_runner.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/experiment_runner.py) iterates through enhancement settings and model architectures, then saves per-run and aggregated summaries.
 
-- **Matplotlib** - Static plotting and visualizations
-- **Seaborn** - Statistical data visualization
-- **TensorBoard** - Real-time training monitoring and visualization
+### 6. Inference
 
-### **Development Tools**
+[src/predict.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/src/predict.py) loads a trained model and tabular scaler, preprocesses new cases, and exports predictions to CSV.
 
-- **Python 3.9+** - Primary programming language
-- **Jupyter Notebook** - Exploratory data analysis and prototyping
-- **Git** - Version control
-- **PyYAML** - Configuration management
-- **Joblib** - Model serialization
+## Environment Setup
 
-### **Testing & Quality Assurance**
+### Requirements
 
-- **Pytest** - Unit testing framework
-- **unittest** - Python standard testing library
-- **Logging** - Python logging module for debugging
+The project depends on:
 
-### **Architecture Patterns**
+- Python 3.9+
+- TensorFlow
+- scikit-learn
+- pandas
+- numpy
+- OpenCV
+- scikit-image
+- matplotlib
+- seaborn
+- PyYAML
+- joblib
+- pytest
 
-- **Factory Pattern** - Model creation and management
-- **Modular Design** - Separation of concerns (data, models, utils)
-- **Pipeline Pattern** - End-to-end ML workflow
-- **Grid Search** - Systematic hyperparameter optimization
-
-### **MLOps Features**
-
-- **Experiment Tracking** - Automated logging of all experiments
-- **Model Versioning** - Systematic model saving with metadata
-- **Reproducibility** - Seed management and configuration tracking
-- **Performance Monitoring** - Real-time progress tracking
-
-### **Key Technical Achievements**
-
-- ✅ **Multi-Modal Deep Learning**: Integration of image and tabular data
-- ✅ **Bilateral Image Processing**: Simultaneous left-right thermogram analysis
-- ✅ **Automated Pipeline**: 60+ experiments with minimal manual intervention
-- ✅ **Production-Ready Code**: Modular, tested, and documented
-- ✅ **Scalable Architecture**: Easy to add new models or enhancement methods
-
-### **Hardware Requirements**
-
-- **Minimum**: 8GB RAM, NVIDIA GPU with 4GB VRAM
-- **Recommended**: 16GB RAM, NVIDIA GPU with 8GB+ VRAM
-- **Storage**: 20GB free space for full experiment
-
-### **Deployment Ready**
-
-- Model serialization in Keras format
-- Standardized preprocessing pipeline
-- Single-image inference capability
-- Error handling and logging
-
-## Image Enhancement Methods
-
-### 1. CLAHE (Contrast Limited Adaptive Histogram Equalization)
-
-- Parameters: clip_limit × tile_grid_size
-- Configurations: 2.0*(8,8), 3.0*(6,12), 3.0*(8,8), 3.0*(16,16)
-
-### 2. Gamma Adjustment
-
-- Parameters: gamma value
-- Configurations: -1.5, 0.5, 1.5, 2, 5
-
-### 3. Posterize
-
-- Parameters: bits
-- Configurations: 1, 2, 3
-
-### 4. Solarize
-
-- Parameters: threshold
-- Configurations: 64, 128, 192
-
-## Instalasi
-
-### 1. Clone Repository
+Install dependencies with:
 
 ```bash
-git clone https://github.com/username/diabetic-foot-ulcer-detection.git
-cd diabetic-foot-ulcer-detection
+python3 -m pip install -r requirements.txt
 ```
 
-### 2. Setup Environment
+## Running the Project
+
+### End-to-end order from raw data
+
+If you are starting from the repository's raw dataset, use the following order.
+
+1. Create and activate a virtual environment.
+2. Install dependencies.
+3. Run dataset preprocessing once.
+4. Run a reduced experiment to verify the pipeline.
+5. Run the full experiment grid.
+
+### 1. Create and activate the environment
 
 ```bash
-# Buat virtual environment
-python -m venv venv
-
-# Aktivasi environment
-# Windows:
-venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+python --version
 ```
 
-### 3. Verifikasi Instalasi
+### 2. Install dependencies
 
 ```bash
-# Jalankan semua unit tests
-python -m pytest tests/ -v
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-## Cara Penggunaan
-
-### 1. Quick Test Run (4 eksperimen)
+### 3. Preprocess the dataset
 
 ```bash
-# Generate test configuration
+python preprocess_dataset.py
+```
+
+This step creates the required `data/processed` artifacts automatically. You do not need to create the directories manually.
+
+The preprocessing script generates:
+
+- `data/processed/[Preprocessed]Plantar Thermogram Data Analysis.csv`
+- `data/processed/images_per_part/...`
+- `data/processed/resized_images/...`
+- `data/processed/image enhancement/...`
+
+What this step does:
+
+- reads the raw tabular CSV from `data/external/Plantar Thermogram Data Analysis.csv`
+- creates the binary `label` column from the subject identifier
+- converts `Gender` from `M/F` to `1/0`
+- standardizes the plantar temperature features
+- copies left/right thermogram images from `data/raw` into the paired folder structure expected by the pipeline
+- computes the average image size from the copied dataset
+- resizes images into `data/processed/resized_images`
+- applies all configured enhancement methods into `data/processed/image enhancement`
+
+If you want to rebuild the processed outputs from scratch, use:
+
+```bash
+python preprocess_dataset.py --clean
+```
+
+### 4. Generate a reduced test configuration
+
+```bash
 python test_run.py
+```
 
-# Jalankan test experiment
+This generates [configs/test_config.yaml](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/configs/test_config.yaml), which limits the run to:
+
+- 2 enhancement families
+- 1 parameter setting per selected enhancement
+- 2 model architectures
+
+for a total of 4 experiments.
+
+### 5. Run the reduced experiment first
+
+```bash
 python main.py --config configs/test_config.yaml
 ```
 
-### 2. Full Grid Search (60 eksperimen)
+This is the recommended sanity check before launching the full grid.
+
+### 6. Run the full configured experiment grid
 
 ```bash
-# Terminal 1: Jalankan experiment
-python main.py
-
-# Terminal 2: Monitor progress
-python monitor_progress.py
-
-# Terminal 3: TensorBoard (optional)
-python launch_tensorboard.py
+python main.py --config configs/config.yaml
 ```
 
-### 3. Analisis Hasil
+## Testing
+
+Run the current automated tests with:
 
 ```bash
-# Setelah experiment selesai
-python analyze_results.py
+python3 -m pytest tests test_run.py -q
 ```
 
-### 4. Prediksi Data Baru
+If `pytest` is unavailable in your environment, install project dependencies first.
 
-```bash
-python predict_single.py \
-    --tabular data_baru.csv \
-    --images path/to/new/images \
-    --model models/CLAHE/2.0_8,8/model1.keras \
-    --scaler models/CLAHE/2.0_8,8/model1_scaler.joblib \
-    --output predictions.csv
-```
+## Current Codebase Notes
 
-## Monitoring & Visualisasi
+This repository is a research codebase rather than a packaged clinical application. A few practical expectations are worth making explicit:
 
-### TensorBoard
+- logging is file based and configured through [configs/logging.conf](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/configs/logging.conf),
+- the preprocessing workflow is now exposed through [preprocess_dataset.py](/home/nurilhuda3333/projects/Optimization-of-Plantar-Foot-Thermogram-for-Diabetic-Foot-Ulceration-Early-Detection-An-Image-Enhan/preprocess_dataset.py),
+- the provided tests focus on core pipeline behavior, not clinical validation.
 
-```bash
-tensorboard --logdir logs/tfboard
-```
+## Citation
 
-Akses di: http://localhost:6006
+If you use this repository in academic work, cite:
 
-### Real-time Progress Monitor
-
-Monitor menampilkan:
-
-- Jumlah eksperimen selesai
-- Best accuracy & configuration
-- Performance per enhancement method
-- Latest experiments
-
-## Hasil Eksperimen
-
-Grid search akan menghasilkan:
-
-- `logs/grid_experiment_summary.csv`: Rangkuman semua eksperimen
-- `logs/experiment_analysis.png`: Visualisasi performa
-- Model terbaik tersimpan di `models/`
-
-### Metrik Evaluasi
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Inference time
-
-## Tips & Best Practices
-
-### 1. **Memory Management**
-
-- Close aplikasi berat (browser, IDE) saat menjalankan full experiment
-- Monitor RAM usage dengan Task Manager/htop
-- Jika memory terbatas, kurangi `batch_size` di config.yaml
-- Gunakan `del` untuk hapus variable besar yang tidak terpakai
-
-### 2. **Experiment Management**
-
-- **Selalu mulai dengan test run** untuk validasi pipeline
-- Backup hasil secara berkala:
-  ```bash
-  cp -r logs/ logs_backup_$(date +%Y%m%d_%H%M%S)/
-  ```
-- Simpan config yang digunakan bersama hasil experiment
-- Dokumentasikan perubahan hyperparameter
-
-### 3. **Troubleshooting**
-
-- **Jika experiment terputus**: Check `grid_experiment_summary.csv` untuk melihat progress terakhir
-- **GPU out of memory**: Kurangi batch_size atau image resolution
-- **Slow training**: Pastikan menggunakan GPU dengan `tf.config.list_physical_devices('GPU')`
-- **Import errors**: Pastikan menjalankan dari root directory project
-
-### 4. **Performance Optimization**
-
-- Gunakan SSD untuk menyimpan dataset (faster I/O)
-- Pre-load images ke memory jika RAM mencukupi
-- Enable mixed precision training untuk GPU modern:
-  ```python
-  tf.keras.mixed_precision.set_global_policy('mixed_float16')
-  ```
-
-### 5. **Reproducibility**
-
-- Selalu set random seed di config
-- Catat versi library yang digunakan: `pip freeze > requirements_exact.txt`
-- Gunakan Git untuk version control
-- Tag commit untuk experiment penting
-
-### 6. **Data Handling**
-
-- Verify data integrity sebelum experiment:
-  ```bash
-  python check_data.py
-  ```
-- Pastikan tidak ada missing images
-- Check data distribution untuk class imbalance
-- Backup raw data di lokasi terpisah
-
-### 7. **Model Selection**
-
-- Mulai dengan model sederhana (model1) untuk baseline
-- Compare training vs validation metrics untuk detect overfitting
-- Save best model berdasarkan validation metric, bukan training
-
-### 8. **Production Deployment**
-
-- Test model dengan single prediction dulu
-- Validate input preprocessing sama dengan training
-- Monitor inference time untuk real-time requirements
-- Implement error handling untuk edge cases
-
-### 9. **Collaboration**
-
-- Gunakan format naming yang konsisten
-- Document experiment assumptions dan decisions
-- Share results dalam format yang mudah dibaca (CSV, plots)
-- Gunakan relative paths, bukan absolute
-
-### 10. **Resource Planning**
-
-- **Estimasi waktu**: ~2-5 jam untuk 60 experiments
-- **Disk space**: ~5-10 GB untuk models dan logs
-- **Best time to run**: Malam hari atau weekend untuk full experiment
-- **Cloud alternative**: Gunakan Google Colab/Kaggle jika resource lokal terbatas
+- the original [plantar thermogram dataset](https://ieee-dataport.org/open-access/plantar-thermogram-database-study-diabetic-foot-complications) publication used by the project, and
+- the corresponding [paper](https://doi.org/10.59190/stc.v5i2.273) associated with this implementation.
