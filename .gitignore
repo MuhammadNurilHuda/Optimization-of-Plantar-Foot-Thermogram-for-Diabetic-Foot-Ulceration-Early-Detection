@@ -1,19 +1,42 @@
+# Data artifacts
 data/processed/*
+data/processed/
+data/raw/**
+
+# Experiment outputs
 logs/
+models/
+*.keras
+*.h5
+*.joblib
+
+# Local configuration
 configs/*.conf
 
+# Python caches
 __pycache__/
 src/__pycache__/
 src/data/__pycache__/
 *.pyc
 .pytest_cache
+.mypy_cache/
+.ruff_cache/
 
-.DS_Store
-
-*.egg-info/
-*.checkpoint
-
-models/
+# Virtual environments
 .venv
-data/processed/
-data/raw/**
+venv/
+env/
+
+# Packaging / build
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# Notebook / checkpoints
+*.checkpoint
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
