@@ -34,7 +34,6 @@ class TestImageLoader(unittest.TestCase):
         shutil.rmtree(cls.test_img_dir)
 
     def test_load_termogram_images(self):
-        from src.data.image_loader import preprocess_termogram
         target_size = (16, 16)
         X_left, X_right = load_termogram_images(self.df, self.test_img_dir, target_size)
         self.assertEqual(X_left.shape, (2, 16, 16))
@@ -44,6 +43,24 @@ class TestImageLoader(unittest.TestCase):
         self.assertTrue(np.all((X_right >= 0) & (X_right <= 1)))
         self.assertAlmostEqual(np.max(X_left), 100/255.0, delta=0.01)
         self.assertAlmostEqual(np.max(X_right), 100/255.0, delta=0.01)
+
+    def test_load_termogram_images_returns_valid_indices(self):
+        target_size = (16, 16)
+        df = pd.DataFrame({
+            "Subject": ["CG001", "CG404", "CG002"],
+            "Gender": ["M", "F", "F"]
+        })
+
+        X_left, X_right, valid_indices = load_termogram_images(
+            df,
+            self.test_img_dir,
+            target_size,
+            return_valid_indices=True,
+        )
+
+        self.assertEqual(X_left.shape[0], 2)
+        self.assertEqual(X_right.shape[0], 2)
+        self.assertEqual(valid_indices, [0, 2])
 
 if __name__ == "__main__":
     unittest.main()

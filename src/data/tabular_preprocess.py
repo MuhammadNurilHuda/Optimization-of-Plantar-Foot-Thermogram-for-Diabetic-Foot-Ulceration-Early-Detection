@@ -16,6 +16,10 @@ def convert_gender_to_numeric(data_tabular: pd.DataFrame) -> pd.DataFrame:
     # Simpan gender original untuk keperluan load image
     data_tabular['Gender_Original'] = data_tabular['Gender']
     data_tabular['Gender'] = data_tabular['Gender'].map({'M': 1, 'F': 0})
+    if data_tabular['Gender'].isna().any():
+        invalid_values = sorted(data_tabular.loc[data_tabular['Gender'].isna(), 'Gender_Original'].astype(str).unique())
+        logger.error(f"Nilai gender tidak valid: {invalid_values}")
+        raise ValueError(f"Unsupported gender values: {invalid_values}")
     
     logger.info("Gender dikonversi menjadi numerik, original disimpan di 'Gender_Original'.")
     return data_tabular
@@ -34,6 +38,8 @@ def preprocess_tabular(data: np.ndarray, scaler: StandardScaler = None) -> (np.n
     Melakukan training scaling jika scaler==None, atau transform jika scaler diberikan.
     Return tuple: (scaled, scaler)
     """
+    if data.ndim != 2:
+        raise ValueError("Tabular data must be a 2D array.")
     if scaler is None:
         scaler = StandardScaler()
         scaled = scaler.fit_transform(data)

@@ -3,12 +3,9 @@
 import os
 import time
 import logging
-import logging.config
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from tensorflow.keras import backend as K
-import joblib
 
 def train_single_experiment(
     X_train_left, X_train_right, X_train_tabular, y_train,
@@ -24,6 +21,7 @@ def train_single_experiment(
     random_seed: int = 42
 ):
     logger = logging.getLogger("src.training")
+    tf.keras.backend.clear_session()
     tf.random.set_seed(random_seed)
     np.random.seed(random_seed)
 
@@ -58,20 +56,16 @@ def train_single_experiment(
     training_time = end_time - start_time
     logger.info(f"Training selesai dalam {training_time:.2f} detik.")
 
-    # Save model - FIX: Remove .replace() karena path sudah benar
+    # Save model in the repository-standard `.keras` format when possible.
     os.makedirs(os.path.dirname(save_model_path), exist_ok=True)
     try:
-        # Pastikan menggunakan format yang konsisten
         if save_model_path.endswith('.h5'):
             save_model_path = save_model_path.replace('.h5', '.keras')
-        K.clear_session()
         model.save(save_model_path)
         logger.info(f"Model disimpan di {save_model_path}")
     except Exception as e:
         logger.error(f"Error saving model: {e}")
-        # Alternative save method
         try:
-            K.clear_session()
             model.save_weights(save_model_path.replace('.keras', '_weights.h5'))
             logger.info(f"Model weights disimpan di {save_model_path.replace('.keras', '_weights.h5')}")
         except Exception as e2:

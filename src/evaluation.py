@@ -22,15 +22,21 @@ def evaluate_model(
 
     metrics = {
         "accuracy": accuracy_score(y_test, y_pred),
-        "precision": precision_score(y_test, y_pred),
-        "recall": recall_score(y_test, y_pred),
-        "f1": f1_score(y_test, y_pred),
-        "roc_auc": roc_auc_score(y_test, y_pred_prob)
+        "precision": precision_score(y_test, y_pred, zero_division=0),
+        "recall": recall_score(y_test, y_pred, zero_division=0),
+        "f1": f1_score(y_test, y_pred, zero_division=0),
     }
+    try:
+        metrics["roc_auc"] = roc_auc_score(y_test, y_pred_prob)
+    except ValueError:
+        metrics["roc_auc"] = float("nan")
+        logger.warning("ROC AUC tidak dapat dihitung karena hanya ada satu kelas pada y_test.")
     logger.info(f"Hasil evaluasi: {metrics}")
 
     if measure_inference_time:
         import time
+        if len(y_test) == 0:
+            raise ValueError("y_test tidak boleh kosong saat evaluasi.")
         idx = np.random.choice(len(y_test))
         sample = ([X_test_left[[idx]], X_test_right[[idx]], X_test_tabular[[idx]]])
         start = time.time()

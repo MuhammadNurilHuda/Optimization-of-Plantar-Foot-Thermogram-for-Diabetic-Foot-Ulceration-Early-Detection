@@ -52,9 +52,21 @@ def adjust_gamma_image(image, gamma):
     Menerapkan gamma adjustment pada citra.
     """
     try:
-        inv_gamma = 1.0 / gamma if gamma != 0 else 0
-        table = np.array([((i / 255.0) ** inv_gamma) * 255
-                          for i in np.arange(256)]).astype("uint8")
+        if gamma == 0:
+            raise ValueError("gamma must be non-zero")
+
+        normalized = np.linspace(0.0, 1.0, 256, dtype=np.float32)
+        abs_gamma = abs(float(gamma))
+        inv_gamma = 1.0 / abs_gamma
+
+        if gamma > 0:
+            mapped = normalized ** inv_gamma
+        else:
+            # Support negative gamma values without undefined 0**negative
+            # operations by applying the same transform to the inverted range.
+            mapped = 1.0 - ((1.0 - normalized) ** inv_gamma)
+
+        table = np.clip(mapped * 255.0, 0, 255).astype("uint8")
         adjusted_image = cv2.LUT(image, table)
         return adjusted_image
     except Exception as e:

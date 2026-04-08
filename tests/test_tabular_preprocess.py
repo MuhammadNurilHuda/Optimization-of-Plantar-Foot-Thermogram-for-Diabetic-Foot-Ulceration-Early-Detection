@@ -36,5 +36,11 @@ class TestTabularPreprocess(unittest.TestCase):
         scaled2, _ = preprocess_tabular(arr, scaler=scaler)
         np.testing.assert_array_almost_equal(scaled, scaled2)
 
+    def test_convert_gender_invalid_value(self):
+        df = self.df.copy()
+        df.loc[0, 'Gender'] = 'X'
+        with self.assertRaises(ValueError):
+            convert_gender_to_numeric(df)
+
 if __name__ == '__main__':
     unittest.main()

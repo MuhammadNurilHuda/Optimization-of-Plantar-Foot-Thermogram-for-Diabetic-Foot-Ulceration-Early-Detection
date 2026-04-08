@@ -1,7 +1,6 @@
 # src\predict.py
 
 import os
-import numpy as np
 import pandas as pd
 import joblib
 import logging
@@ -44,12 +43,20 @@ def predict_new_data(
     
     # Load + preprocess images
     logger.info("Memuat termogram (Left/Right)...")
-    X_left, X_right = load_termogram_images(data_tabular, image_dir, target_size)
+    X_left, X_right, valid_indices = load_termogram_images(
+        data_tabular,
+        image_dir,
+        target_size,
+        return_valid_indices=True,
+    )
     
     # Validasi jumlah sampel
     if len(X_left) == 0 or len(X_right) == 0:
         logger.error("Tidak ada gambar yang berhasil dimuat!")
         raise ValueError("Tidak ada gambar yang berhasil dimuat!")
+
+    data_tabular = data_tabular.iloc[valid_indices].reset_index(drop=True)
+    X_tabular = X_tabular[valid_indices]
     
     # Prediksi
     logger.info("Predicting data baru")

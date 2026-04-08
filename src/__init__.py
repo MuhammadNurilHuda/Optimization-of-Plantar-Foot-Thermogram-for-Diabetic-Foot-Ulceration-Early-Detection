@@ -1,6 +1,8 @@
-# src/__init__.py
+"""Top-level package for the DFU thermogram research pipeline.
 
-from .apply_image_enhancement import process_images
-from .models import create_model1, create_model2, create_model3, create_model4
+The package intentionally keeps imports lightweight so utility modules can be
+used without immediately requiring heavy optional dependencies such as
+TensorFlow.
+"""
 
-__all__ = ['models', 'data', 'utils']
+__all__ = ["data", "models", "utils"]

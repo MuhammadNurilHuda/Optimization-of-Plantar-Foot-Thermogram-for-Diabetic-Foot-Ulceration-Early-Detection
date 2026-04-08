@@ -9,7 +9,6 @@ import numpy as np
 
 from src.models import create_model1, create_model2, create_model3, create_model4
 from src.data.image_loader import load_termogram_images
-from src.data.tabular_preprocess import preprocess_tabular
 from src.data.data_split import split_data
 from src.training import train_single_experiment
 from src.evaluation import evaluate_model
@@ -63,14 +62,18 @@ def run_full_grid_experiment(config_path: str):
             X_tabular = scaler.fit_transform(X_tabular_raw)
             
             # Muat termogram & preprocess
-            X_left, X_right = load_termogram_images(data_tabular, img_dir, target_size)
-            
-            # Validasi: jumlah sample pada citra & tabular match?
-            min_n = min(len(X_left), len(X_tabular))
-            if min_n < 10:
+            X_left, X_right, valid_indices = load_termogram_images(
+                data_tabular,
+                img_dir,
+                target_size,
+                return_valid_indices=True,
+            )
+
+            if len(valid_indices) < 10:
                 logger.warning(f"Jumlah sample sangat sedikit di {enhancement}-{param}, skip...")
                 continue
-            X_left, X_right, X_tabular, y = X_left[:min_n], X_right[:min_n], X_tabular[:min_n], y[:min_n]
+            X_tabular = X_tabular[valid_indices]
+            y = y[valid_indices]
             
             # Split train/test
             (X_train_left, X_test_left,
