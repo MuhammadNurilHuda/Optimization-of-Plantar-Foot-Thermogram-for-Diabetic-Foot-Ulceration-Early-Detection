@@ -14,5 +14,6 @@ src/data/__pycache__/
 *.checkpoint
 
 models/
-venv/
+.venv
 data/processed/
+data/raw/**
